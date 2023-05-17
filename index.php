@@ -4,23 +4,23 @@
  * [Description products]
  * @param string $_name, 
  * @param string $_description,
- * @param string $_prezzo, 
+ * @param string $_price, 
  * @param string $_category
  */
 class products
 {
     private $name;
     private $description;
-    private $prezzo;
+    private $price;
     private $image;
     private $category;
 
-    public function __construct($_name, $_description, $_prezzo, $_image, $_category)
+    public function __construct($_name, $_description, $_price, $_image, $_category)
     {
 
         $this->name = $_name;
         $this->description = $_description;
-        $this->prezzo = $_prezzo;
+        $this->price = $_price;
         $this->image = $_image;
         $this->category = $_category;
     }
@@ -59,7 +59,7 @@ class Dog extends Category
 
     public function __construct($name, $breed, $height)
     {
-        parent::__construct($name);
+        Category::__construct($name);
         $this->breed = $breed;
         $this->height = $height;
     }
