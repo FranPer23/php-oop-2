@@ -5,7 +5,7 @@
  * @param string $_name, 
  * @param string $_description,
  * @param string $_price, 
- * @param string $_category
+ * @param string $_category 
  */
 class products
 {
@@ -23,6 +23,11 @@ class products
         $this->price = $_price;
         $this->image = $_image;
         $this->category = $_category;
+
+
+        if (!is_numeric($_price)) {
+            throw new Exception("Il prezzo deve essere un valore numerico.");
+        }
     }
 }
 
